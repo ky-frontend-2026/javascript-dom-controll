@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 600vh;
+        }
+        .box{
+            position: fixed;
+            width: 100px;
+            height: 100px;
+            background-color: darkblue;
+            bottom:20px;
+            right:20px;
+            transition: all .3s;
+            opacity: 0;
+            transform: translateY(50px);
+        }
+        body.on .box {
+            opacity: 1;
+            transform: translateY(0);
+
+        }
+          #resizeBox { width: 100px; height: 100px; background: coral; }
+    </style>
+</head>
+<body>
+    <div class="box">box</div>
+     <div id="resizeBox"></div>
+    <script>
+        const body = document.querySelector('body')
+        const resizeBox =  document.getElementById('resizeBox')
+
+      // 창 크기 조정 이벤트
+        window.addEventListener('resize', function() {
+
+            console.log(window.innerWidth)
+            // document.getElementById('resizeBox').style.width = window.innerWidth / 10 + 'px';
+            if(window.innerWidth<300){
+                resizeBox.style.display='none'
+            }else{
+                resizeBox.style.display='block'
+
+            }
+
+        });
+        window.addEventListener('scroll',()=>{
+            let i = document.documentElement.scrollTop
+            // console.log(i)
+
+            if(i>100){
+
+                body.classList.add('on')
+            }else{
+                body.classList.remove('on')
+
+            }
+
+            
+        })
+    </script>
+</body>
+</html>
