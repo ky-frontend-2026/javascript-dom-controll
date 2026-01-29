@@ -1,0 +1,97 @@
+*{margin: 0;padding:0;box-sizing: border-box;}
+
+a{text-decoration: none;}
+
+.carousel-slider{
+    width: 1200px;
+    margin:200px auto;
+    text-align: center;
+    padding: 50px  0;
+}
+
+.carousel-slider .swiper-slide a{
+    background-color: rgb(255, 255, 255);
+    display: block;
+    width: 300px;
+    height: 300px;
+    margin: auto;
+    overflow: hidden;
+    border-radius: 30px;
+    background-position: center;
+    background-size: auto 80%;
+    background-repeat: no-repeat;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.274);
+    position: relative;
+}
+
+.carousel-slider .swiper-slide a .bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    top: 0;
+    z-index: 0;
+    opacity: 0;
+    transition: all .3s;
+}
+.carousel-slider .swiper-slide a  span {
+    position: absolute;
+    font-size: 50px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,200%);
+    color: #fff;
+    z-index: 2;
+    transition: all .3s;
+}
+
+.carousel-slider .swiper-slide a:hover .bg{
+    opacity: 1;
+}
+.carousel-slider .swiper-slide a:hover  span {
+    transform: translate(-50%,-50%);
+
+}
+.carousel-slider .swiper-slide.swiper-slide-prev a{
+    transform: translateX(100px);
+}
+.carousel-slider .swiper-slide.swiper-slide-next a{
+    transform: translateX(-100px);
+}
+.carousel-slider .swiper-slide.swiper-slide-next {
+    
+    z-index: 3;
+}
+.carousel-slider .swiper-slide.swiper-slide-active {
+    z-index: 5;
+
+}
+.carousel-slider .swiper-slide.swiper-slide-active a{
+    transform: scale(1.3);
+}
+
+.carousel-slider .swiper-slide.s01 a{
+    background-image: url(../img/1.png);
+}
+.carousel-slider .swiper-slide.s02 a{
+    background-image: url(../img/2.png);
+}
+.carousel-slider .swiper-slide.s03 a{
+    background-image: url(../img/3.png);
+}
+.carousel-slider .swiper-slide.s04 a{
+    background-image: url(../img/4.png);
+}
+.carousel-slider .swiper-slide.s05 a{
+    background-image: url(../img/5.png);
+}
+.carousel-slider .swiper-slide.s06 a{
+    background-image: url(../img/6.png);
+}
+.carousel-slider .swiper-slide.s07 a{
+    background-image: url(../img/7.png);
+}
+.carousel-slider .swiper-slide.s08 a{
+    background-image: url(../img/8.png);
+}
+
