@@ -1,0 +1,55 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background-color: rgb(0, 0, 0);
+  gap: 50px;
+  
+}
+svg.name {
+  width: 1400px;
+}
+svg.name path {
+    stroke: transparent; /* 시작은 안 보이게 */
+  fill: none;           /* ⭐ 채우기 제거 */
+  stroke: #ffffff;      
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+button.btn {
+  border: none;
+  background-color: transparent;
+  font-size: 50px;
+  color: #fff;
+  border-bottom: 10px solid #fff;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+.circle-wrap {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50% , -40%);
+  opacity: 0;
+
+}
+.circle-wrap .ico {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-color: #EBD55A;
+  border-radius: 50%;
+  margin-top: -11px;
+  margin-left: -25px;
+  /* opacity: 0; */
+  
+}
