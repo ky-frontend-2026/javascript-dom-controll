@@ -1,0 +1,59 @@
+*{margin: 0;padding:0;box-sizing: border-box;}
+
+#container {
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+svg{
+    width: 200px;
+    stroke-width: 10;
+    fill:transparent
+
+}
+.moon {
+    stroke: yellow;
+    stroke-dashoffset:0;
+    stroke-dasharray: 1545;
+}
+.star {
+    stroke: rgb(0, 255, 85);
+    stroke-dashoffset:0;
+    stroke-dasharray: 1775;
+}
+.heart {
+    stroke-dashoffset:0;
+    stroke-dasharray: 1575;
+    stroke: rgb(0, 225, 255);
+}
+
+@keyframes moon {
+    0%{ stroke-dashoffset:0;}
+    50%{ stroke-dashoffset:1545;}
+    80%{ stroke-dashoffset:3090;fill: transparent;}
+    100%{ stroke-dashoffset:3090;fill: yellow;}
+}
+@keyframes star {
+    0%{ stroke-dashoffset:0;}
+    50%{ stroke-dashoffset:1775;}
+    80%{ stroke-dashoffset:3550;fill: transparent;}
+    100%{ stroke-dashoffset:3550;fill: rgb(0, 255, 85);}
+}
+@keyframes heart {
+    0%{ stroke-dashoffset:0;}
+    50%{ stroke-dashoffset:1575;}
+    80%{ stroke-dashoffset:3150;fill: transparent;}
+    100%{ stroke-dashoffset:3150;fill:rgb(0, 225, 255);}
+}
+
+.moon:hover {
+    animation: moon 3s 1 forwards ease-in-out;
+}
+.star:hover {
+    animation: star 3s 1 forwards ease-in-out;
+}
+.heart:hover {
+    animation: heart 3s 1 forwards ease-in-out;
+}
