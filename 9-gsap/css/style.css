@@ -1,0 +1,26 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+ul {
+  list-style-type: none;
+  display: flex;
+  gap: 10px;
+}
+
+li {
+  width: 100px;
+  height: 100px;
+  background-color: rgb(157, 250, 114);
+}
+li:nth-child(even) {
+    background-color: rgb(255, 246, 125);
+}
